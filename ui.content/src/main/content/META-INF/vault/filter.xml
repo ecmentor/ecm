@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ecm" mode="merge"/>
+    <filter root="/content/ecm" mode="merge"/>
+    <filter root="/content/dam/ecm" mode="merge">
+        <exclude pattern="/content/dam/ecm(/.*)?"/>
+        <include pattern="/content/dam/ecm/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/ecm/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/ecm" mode="merge"/>
+</workspaceFilter>
