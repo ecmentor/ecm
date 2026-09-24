@@ -1,0 +1,37 @@
+/* Base Card Layout (Standard Vertical Block) */
+.cmp-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cmp-card__image {
+    width: 100%;
+    height: auto;
+}
+.cmp-card__text {
+    padding: 16px;
+}
+
+/* 1. Horizontal Card Style Layout */
+.card--horizontal .cmp-card {
+    flex-direction: row;
+    align-items: center;
+}
+.card--horizontal .cmp-card__image {
+    width: 40%; /* Shrink image to side-by-side */
+}
+
+/* 2. Image Overlay Card Style Layout */
+.card--overlay .cmp-card {
+    position: relative;
+}
+.card--overlay .cmp-card__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 100%;
+}

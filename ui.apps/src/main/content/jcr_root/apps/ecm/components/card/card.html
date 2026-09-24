@@ -1,0 +1,12 @@
+<div class="cmp-card" data-cmp-is="card">
+    <!-- 1. The Image Element -->
+    <img class="cmp-card__image" src="${properties.fileReference @ context='uri'}" alt="" data-sly-test="${properties.fileReference}"/>
+
+    <!-- 2. The Text Element -->
+    <div class="cmp-card__text" data-sly-test="${properties.text}">${properties.text}</div>
+</div>
+
+<!-- 3. Edit Mode Placeholder: Visible only in Author Edit mode when empty -->
+<sly data-sly-test="${wcmmode.edit && !properties.fileReference && !properties.text}">
+    <div class="cq-placeholder" data-emptytext="${'Card Component' @ i18n}"></div>
+</sly>
