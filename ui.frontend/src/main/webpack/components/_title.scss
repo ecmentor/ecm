@@ -9,5 +9,32 @@
 
 .subtle-title {
     color: #757575;
-    font-weight: 400;
+    font-weight: 500;
 }
+
+.bold-title{
+    font-weight: bold;
+    }
+
+.italic-title{
+    font-style: italic
+    }
+
+.underline{
+    text-decoration: underline;
+    }
+
+.quote{
+    font-style: italic;
+    background-color: #f9f9f9;
+    border-left: 3px solid #ccc;
+    padding: 10px;
+    }
+
+.color-red{
+    color: #ff0000;
+    }
+
+.background-yellow{
+    background-color: #ffff00;
+    }

@@ -235,6 +235,38 @@
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item1>
+                        <item2
+                                cq:styleGroupLabel="Title spl"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="underline"
+                                        cq:styleId="1790227063356"
+                                        cq:styleLabel="Title-underline"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                        cq:styleClasses="quote"
+                                        cq:styleId="1790227073757"
+                                        cq:styleLabel="Title-quote"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
+                        <item3
+                                cq:styleGroupLabel="Custom"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="color-red"
+                                        cq:styleId="1790227063096"
+                                        cq:styleLabel="Color"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                        cq:styleClasses="background-yellow"
+                                        cq:styleId="1790227073723"
+                                        cq:styleLabel="Background"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item3>
                     </cq:styleGroups>
                 </policy_641528232375303>
             </title>
