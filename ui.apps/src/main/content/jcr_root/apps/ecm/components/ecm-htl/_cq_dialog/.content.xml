@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="ECM HTL Component"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+        <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+
+            <items jcr:primaryType="nt:unstructured">
+
+                <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Section Title"
+                        name="./title"/>
+
+                <showFeatures
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        text="Enable Advanced Feature Mode"
+                        name="./showFeatures"
+                        value="{Boolean}true"
+                        uncheckedValue="{Boolean}false"/>
+
+                <titleType
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Heading Element Type"
+                        name="./titleType">
+
+                    <items jcr:primaryType="nt:unstructured">
+                        <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="Heading 2"
+                                value="h2"/>
+
+                        <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="Heading 3"
+                                value="h3"/>
+
+                        <div
+                                jcr:primaryType="nt:unstructured"
+                                text="Div Tag"
+                                value="div"/>
+                    </items>
+                </titleType>
+
+                <links
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldLabel="Dashboard Metric Quick-Links"
+                        composite="{Boolean}true">
+
+                    <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./links">
+
+                        <items jcr:primaryType="nt:unstructured">
+                            <label
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Link Label"
+                                    name="./label"/>
+
+                            <url
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Link Path"
+                                    name="./url"
+                                    rootPath="/content"/>
+
+                            <isExternal
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                    text="Open in New Tab"
+                                    name="./isExternal"
+                                    value="{Boolean}true"
+                                    uncheckedValue="{Boolean}false"/>
+                        </items>
+                    </field>
+                </links>
+
+            </items>
+        </column>
+        </items>
+    </content>
+</jcr:root>
