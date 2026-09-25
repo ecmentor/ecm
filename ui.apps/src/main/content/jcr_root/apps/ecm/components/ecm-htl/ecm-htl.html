@@ -1,0 +1,127 @@
+<div class="htl-showcase" data-sly-use.model="com.aem.ecm.core.models.ECMHTLModel" data-sly-test="${model.title || model.showFeatures || model.links}">
+
+    <!--
+        2. data-sly-set:
+        Stores a value for reuse.
+    -->
+    <sly data-sly-set.hasTitle="${model.title}"/>
+
+    <!--
+        3. data-sly-test:
+        Renders the header only when the title is available.
+    -->
+    <header class="htl-showcase__header" data-sly-test="${hasTitle}">
+
+        <!--
+            4. data-sly-element:
+            Dynamically renders h2, h3 or div.
+
+            5. Standard HTML attributes:
+            Class and title are added directly because their values are static.
+        -->
+        <div class="htl-showcase__heading" title="Dynamic Header Input" data-sly-element="${model.titleType ? model.titleType : 'h2'}">
+            ${model.title}
+        </div>
+    </header>
+
+    <!--
+        6. data-sly-unwrap:
+        Removes the parent div while preserving its content.
+    -->
+    <div class="temporary-unwrapping-container" data-sly-unwrap>
+        <p>
+            This paragraph displays, but its parent div is removed
+            from the rendered HTML.
+        </p>
+    </div>
+
+    <!-- Features are displayed only when enabled -->
+    <div class="htl-showcase__body" data-sly-test="${model.showFeatures}">
+
+        <!--
+            7. data-sly-list:
+            Repeats the li element content and provides list metadata.
+        -->
+        <h3>Quick Links using data-sly-list</h3>
+
+        <ul class="htl-showcase__list" data-sly-list.linkItem="${model.links}">
+            <li class="htl-showcase__list-item">
+                <span class="htl-showcase__index">
+                    Index: ${linkItemList.index}
+                </span>
+
+                <a class="htl-showcase__link" href="${linkItem.url}" target="${linkItem.isExternal ? '_blank' : '_self'}" rel="${linkItem.isExternal ? 'noopener noreferrer' : ''}">
+                    ${linkItem.label}
+                </a>
+
+                <span data-sly-test="${linkItemList.first}">
+                    (First Item)
+                </span>
+
+                <span data-sly-test="${linkItemList.last}">
+                    (End of List)
+                </span>
+            </li>
+        </ul>
+
+        <!-- Message when feature mode is enabled but links are empty -->
+        <p data-sly-test="${!model.links && wcmmode.edit}">
+            No quick links have been configured.
+        </p>
+
+        <!--
+            8. data-sly-repeat:
+            Repeats the element on which it is declared.
+        -->
+        <h3>Inline Grid Items using data-sly-repeat</h3>
+
+        <span class="htl-showcase__badge" data-sly-repeat.badgeItem="${model.links}">
+            [${badgeItem.label}]
+        </span>
+    </div>
+
+    <footer class="htl-showcase__footer">
+
+        <!--
+            9. data-sly-resource:
+            Creates or resolves a child resource and renders another component.
+            Replace the resourceType if your search component uses another path.
+        -->
+        <p>Embedded Search component child resource:</p>
+
+        <div data-sly-resource="${'search-bar' @ resourceType='ecm/components/search'}">
+        </div>
+
+        <!--
+            10. data-sly-include:
+            Includes another HTL file from the same component folder.
+        -->
+        <p>Shared standard statutory disclaimer text:</p>
+
+        <div data-sly-include="disclaimer.html"></div>
+    </footer>
+
+    <!--
+        11. data-sly-template:
+        Defines a reusable local HTL template.
+    -->
+    <sly data-sly-template.utilityBadge="${@ textValue, statusType}">
+        <div class="custom-macro-badge custom-macro-badge--${statusType}">
+            System Log: ${textValue}
+        </div>
+    </sly>
+
+    <!--
+        12. data-sly-call:
+        Calls the local utilityBadge template.
+    -->
+    <div class="htl-showcase__logs">
+        <sly data-sly-call="${utilityBadge @ textValue='HTL Demo Success', statusType='active'}"/>
+    </div>
+
+</div>
+
+<!-- Edit mode placeholder: Visible only in Author Edit mode when empty -->
+<sly data-sly-test="${wcmmode.edit && !model.title && !model.links}">
+    <div class="cq-placeholder" data-emptytext="ECM HTL Component - Configure"></div>
+</sly>
