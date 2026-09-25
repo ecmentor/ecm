@@ -78,6 +78,8 @@
             </image>
             <text jcr:primaryType="nt:unstructured">
                 <policy_641562756958017
+                    jcr:lastModified="{Date}2026-09-25T10:14:11.220+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Text"
                     sling:resourceType="wcm/core/components/policy/policy">
@@ -158,11 +160,24 @@
                             features="bold,italic"/>
                         <links
                             jcr:primaryType="nt:unstructured"
-                            features="modifylink,unlink"/>
+                            features="-"/>
                         <subsuperscript
                             jcr:primaryType="nt:unstructured"
                             features="-"/>
                     </rtePlugins>
+                    <cq:styleGroups jcr:primaryType="nt:unstructured">
+                        <item0
+                            cq:styleGroupLabel="Alignment"
+                            jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleClasses="text-qoute"
+                                    cq:styleId="1790311432289"
+                                    cq:styleLabel="Qoute"
+                                    jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item0>
+                    </cq:styleGroups>
                 </policy_641562756958017>
             </text>
             <title jcr:primaryType="nt:unstructured">
@@ -274,10 +289,13 @@
                 </policy_1574694950110>
                 <policy_1574695586800
                     jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                    jcr:lastModified="{Date}2026-09-25T09:12:43.480+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Content"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:ECM - Content,/apps/ecm/components/form/container]">
+                    components="[group:ECM - Content,/apps/ecm/components/form/container]"
+                    layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
                         <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -379,12 +397,12 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
             </page>
-            <card jcr:primaryType="nt:unstructured">
-                <policy_1790252445796
-                    jcr:lastModified="{Date}2026-09-24T17:54:35.244+05:30"
+            <ecm-card jcr:primaryType="nt:unstructured">
+                <policy_1790313521931
+                    jcr:lastModified="{Date}2026-09-25T10:51:36.541+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Card Policy"
+                    jcr:title="ECM Card Policy"
                     sling:resourceType="wcm/core/components/policy/policy">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:styleGroups jcr:primaryType="nt:unstructured">
@@ -394,19 +412,19 @@
                             <cq:styles jcr:primaryType="nt:unstructured">
                                 <item0
                                     cq:styleClasses="card--horizontal"
-                                    cq:styleId="1790252484498"
-                                    cq:styleLabel="Horizontal Card"
+                                    cq:styleId="1790313655607"
+                                    cq:styleLabel="Horizontal"
                                     jcr:primaryType="nt:unstructured"/>
                                 <item1
                                     cq:styleClasses="card--overlay"
-                                    cq:styleId="1790252655171"
-                                    cq:styleLabel="Image Overlay Card"
+                                    cq:styleId="1790313673832"
+                                    cq:styleLabel="Overlay"
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
                     </cq:styleGroups>
-                </policy_1790252445796>
-            </card>
+                </policy_1790313521931>
+            </ecm-card>
         </components>
     </ecm>
     <wcm jcr:primaryType="nt:unstructured">
