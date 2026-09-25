@@ -220,6 +220,22 @@
                                     jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item1>
+                        <item2
+                                cq:styleGroupLabel="Title spl"
+                                jcr:primaryType="nt:unstructured">
+                            <cq:styles jcr:primaryType="nt:unstructured">
+                                <item0
+                                        cq:styleClasses="underline"
+                                        cq:styleId="1790227063356"
+                                        cq:styleLabel="Title-underline"
+                                        jcr:primaryType="nt:unstructured"/>
+                                <item1
+                                        cq:styleClasses="quote"
+                                        cq:styleId="1790227073757"
+                                        cq:styleLabel="Title-quote"
+                                        jcr:primaryType="nt:unstructured"/>
+                            </cq:styles>
+                        </item2>
                     </cq:styleGroups>
                 </policy_641528232375303>
             </title>
