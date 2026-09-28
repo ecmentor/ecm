@@ -1,0 +1,53 @@
+<sly
+        data-sly-use.card="${'com.aem.ecm.core.models.ECMTeaser'
+        @ theme='dark'}">
+</sly>
+
+<article class="ecm-teaser ecm-teaser--${card.theme}"
+         data-campaign="${card.campaign}">
+
+    <h2 class="ecm-teaser__title">
+        ${card.title}
+    </h2>
+
+    <p class="ecm-teaser__description"
+       data-sly-test="${card.description}">
+        ${card.description}
+    </p>
+
+    <ul class="ecm-teaser__items"
+        data-sly-test="${card.items}"
+        data-sly-list.item="${card.items}">
+
+        <li class="ecm-teaser__item">
+            <span class="ecm-teaser__icon"
+                  data-sly-test="${item.icon}">
+                ${item.icon}
+            </span>
+
+            <span class="ecm-teaser__label">
+                ${item.label}
+            </span>
+
+        </li>
+    </ul>
+
+    <a class="ecm-teaser__cta"
+       data-sly-test="${card.configuredCtaLink}"
+       href="${card.configuredCtaLink @ context='uri'}">
+        Learn more
+    </a>
+    <div class="ecm-teaser__debug">
+        <p>Current page: ${card.currentPageTitle}</p>
+        <p>Containing page: ${card.containingPagePath}</p>
+        <p>Component resource: ${card.resourcePath}</p>
+        <p>Theme request attribute: ${card.theme}</p>
+        <p>Campaign request parameter: ${card.campaign}</p>
+
+    </div>
+
+</article>
+<!-- Edit mode placeholder: Visible only in Author Edit mode when empty -->
+<sly data-sly-test="${wcmmode.edit && !model.title && !model.links}">
+    <div class="cq-placeholder" data-emptytext="ECM HTL Component - Configure"></div>
+</sly>

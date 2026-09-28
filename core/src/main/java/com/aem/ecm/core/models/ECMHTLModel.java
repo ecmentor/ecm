@@ -3,8 +3,10 @@ package com.aem.ecm.core.models;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 
@@ -12,7 +14,11 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
         adapters = ECMHTLModel.class,
         resourceType = "ecm/components/ecm-htl", // Binds it directly to your component path
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Exporter(name = "jackson", extensions = "json")
 public class ECMHTLModel {
+
+    @Self
+    private Resource resource;
 
     // Maps directly to name="./title"
     @ValueMapValue
