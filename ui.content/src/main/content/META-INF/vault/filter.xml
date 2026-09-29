@@ -8,4 +8,7 @@
     </filter>
     <filter root="/content/dam/ecm/asset.jpg" mode="merge"/>
     <filter root="/content/experience-fragments/ecm" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models"/>
+    <filter root="/var/workflow/models/ecm-workflow-fundamentals"/>
+    <filter root="/var/workflow/models/ecm-workflow-process-step"/>
 </workspaceFilter>
