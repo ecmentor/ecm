@@ -3,4 +3,5 @@
     <filter root="/apps/ecm/clientlibs"/>
     <filter root="/apps/ecm/components"/>
     <filter root="/apps/ecm/i18n"/>
+    <filter root="/apps/ecm/workflow"/>
 </workspaceFilter>
