@@ -1,0 +1,44 @@
+<sly data-sly-use.model="com.aem.ecm.core.models.ProductCardModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<div class="cmp-product-card"
+     data-sly-test.hasContent="${model.productName}">
+
+    <h3 class="cmp-product-card__title">
+        ${model.productName}
+    </h3>
+
+    <div class="cmp-product-card__pricing">
+
+        <p class="cmp-product-card__original-price">
+            <span class="cmp-product-card__label">
+                Original price:
+            </span>
+
+            <span class="cmp-product-card__value">
+                ₹${'#,##0.00' @ format=model.price}
+            </span>
+        </p>
+
+        <p class="cmp-product-card__discount">
+            You save
+            ${'0.##' @ format=model.discountPercentage}%
+        </p>
+
+        <p class="cmp-product-card__final-price">
+            <span class="cmp-product-card__label">
+                Final price:
+            </span>
+
+            <span class="cmp-product-card__value">
+                ₹${'#,##0.00' @ format=model.discountedPrice}
+            </span>
+        </p>
+
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder
+    @ isEmpty=!hasContent,
+      classAppend='cmp-product-card'}">
+</sly>
