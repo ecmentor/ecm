@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2026-09-29T20:57:27.420+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="ECM-Workflow-Dialog-Participant"
+        sling:resourceType="cq/workflow/components/pages/model"
+        lastSynced="{Date}2026-09-29T20:57:29.259+05:30">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <dialog
+                jcr:created="{Date}2026-09-29T20:54:45.293+05:30"
+                jcr:createdBy="admin"
+                jcr:description="Review the page and provide a decision and comments"
+                jcr:lastModified="{Date}2026-09-29T20:57:27.417+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Review Page With Dialog"
+                sling:resourceType="cq/workflow/components/model/dialog">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    DIALOG_PATH="/apps/ecm/components/content-review/cq:dialog"
+                    PARTICIPANT="admin"/>
+            </dialog>
+        </flow>
+    </jcr:content>
+</jcr:root>
