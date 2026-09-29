@@ -1,0 +1,94 @@
+.cmp-regional-offices {
+    padding: 48px 24px;
+    background-color: #f8fafc;
+}
+
+.cmp-regional-offices__title {
+    margin: 0 0 32px;
+    color: #0f172a;
+    font-size: 32px;
+    text-align: center;
+}
+
+.cmp-regional-offices__grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(260px, 1fr)
+    );
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cmp-regional-offices__card {
+    position: relative;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cmp-regional-offices__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+}
+
+.cmp-regional-offices__country {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #1d4ed8;
+    background-color: #dbeafe;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.cmp-regional-offices__office-name {
+    margin: 18px 0;
+    color: #0f172a;
+    font-size: 21px;
+}
+
+.cmp-regional-offices__details {
+    margin: 0;
+}
+
+.cmp-regional-offices__detail {
+    margin-top: 14px;
+}
+
+.cmp-regional-offices__detail dt {
+    margin-bottom: 4px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cmp-regional-offices__detail dd {
+    margin: 0;
+}
+
+.cmp-regional-offices__detail a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.cmp-regional-offices__detail a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .cmp-regional-offices {
+        padding: 32px 16px;
+    }
+
+    .cmp-regional-offices__title {
+        font-size: 26px;
+    }
+}

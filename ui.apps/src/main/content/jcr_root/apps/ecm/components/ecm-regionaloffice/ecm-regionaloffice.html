@@ -1,0 +1,56 @@
+<sly data-sly-use.model="com.aem.ecm.core.models.RegionalOfficesModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+<section class="cmp-regional-offices"
+         data-sly-test="${!model.empty}">
+
+    <h2 class="cmp-regional-offices__title">
+        Our Regional Offices
+    </h2>
+
+    <div class="cmp-regional-offices__grid">
+
+        <article class="cmp-regional-offices__card"
+                 data-sly-list.office="${model.offices}">
+
+            <div class="cmp-regional-offices__country">
+                ${office.countryCode}
+            </div>
+
+            <h3 class="cmp-regional-offices__office-name">
+                ${office.officeName}
+            </h3>
+
+            <dl class="cmp-regional-offices__details">
+
+                <div class="cmp-regional-offices__detail">
+                    <dt>Email</dt>
+
+                    <dd>
+                        <a href="mailto:${office.supportEmail}">
+                            ${office.supportEmail}
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="cmp-regional-offices__detail">
+                    <dt>Phone</dt>
+
+                    <dd>
+                        <a href="tel:${office.supportPhone}">
+                            ${office.supportPhone}
+                        </a>
+                    </dd>
+                </div>
+
+            </dl>
+
+        </article>
+
+    </div>
+</section>
+
+<sly data-sly-call="${templates.placeholder
+    @ isEmpty=model.empty,
+      classAppend='cmp-regional-offices'}">
+</sly>
