@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "create service user ecm-content-reader-service with forced path system/cq:services/ecm\nset principal ACL for ecm-content-reader-service\n  allow jcr:read on /content/ecm\nend"
+  ]
+}

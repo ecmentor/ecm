@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "ecm.core:regional-content-reader=[ecm-content-reader-service]"
+  ]
+}
