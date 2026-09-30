@@ -1,0 +1,62 @@
+<sly data-sly-use.model="com.aem.ecm.core.models.NotificationChannelModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+
+
+<section class="cmp-regional-offices"
+         data-sly-test="${!model.empty}">
+
+    <h2 class="cmp-regional-offices__title">
+        Notification Channel
+    </h2>
+
+    <div class="cmp-regional-offices__grid">
+
+        <article class="cmp-regional-offices__card"
+                 data-sly-list.channel="${model.channels}">
+
+            <div class="cmp-regional-offices__country">
+                ${channel.channelCode}
+            </div>
+
+            <h3 class="cmp-regional-offices__office-name">
+                ${channel.channelName}
+            </h3>
+
+            <dl class="cmp-regional-offices__details">
+
+                <div class="cmp-regional-offices__detail">
+                    <dt>Email</dt>
+
+                    <dd>
+                        <a href="mailto:${channel.sender}">
+                            ${channel.sender}
+                        </a>
+                    </dd>
+                </div>
+
+                <div class="cmp-regional-offices__detail">
+                    <dt>Enabled</dt>
+
+                    <dd>
+                        ${channel.enabled}
+                    </dd>
+                </div>
+
+                <div class="cmp-regional-offices__detail">
+                    <dt>Priority</dt>
+
+                    <dd>
+                        ${channel.priority}
+                    </dd>
+                </div>
+
+            </dl>
+
+        </article>
+
+    </div>
+</section>
+
+<sly data-sly-test="${wcmmode.edit && !model.empty}">
+    <div class="cq-placeholder" data-emptytext="${'Configure Notification Channel Component' @ i18n}"></div>
+</sly>
