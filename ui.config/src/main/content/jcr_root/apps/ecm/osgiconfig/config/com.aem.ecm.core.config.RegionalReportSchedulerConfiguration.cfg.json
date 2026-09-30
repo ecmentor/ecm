@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "schedulerName": "ECM Regional Content Report",
+  "cronExpression": "0 * * * * ?",
+  "region": "US",
+  "contentPath": "/content/ecm/us/en",
+  "reportType": "MISSING_DESCRIPTION"
+}
