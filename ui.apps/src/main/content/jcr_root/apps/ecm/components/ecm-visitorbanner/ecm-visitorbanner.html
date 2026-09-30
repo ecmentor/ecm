@@ -1,0 +1,16 @@
+<div data-sly-use.model="com.aem.ecm.core.models.VisitorBannerModel">
+
+    <div data-sly-test="${properties.title}">${properties.title}</div>
+
+    <h2>
+        ${model.greeting}
+    </h2>
+
+    <span> Page Name :
+            ${model.pageTitle}
+        </span>
+</div>
+<!-- Edit mode placeholder: Visible only in Author Edit mode when empty -->
+<sly data-sly-test="${wcmmode.edit  && !model.greeting}">
+    <div class="cq-placeholder" data-emptytext="ECM Visitor Banner Component - Configure"></div>
+</sly>
