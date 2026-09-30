@@ -1,0 +1,7 @@
+{
+  "channelName": "Email",
+  "channelCode": "EMAIL",
+  "sender": "notifications@example.com",
+  "enabled": true,
+  "priority": 1
+}

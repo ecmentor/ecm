@@ -1,0 +1,7 @@
+{
+  "channelName": "Mobile Push",
+  "channelCode": "PUSH",
+  "sender": "ECM Mobile App",
+  "enabled": false,
+  "priority": 3
+}
