@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="nt:unstructured">
+    <append-suffix
+        cq:trigger="rollout"
+        jcr:description="Appends &quot;(Synced)&quot; to the page title of a Live Copy whenever content is rolled out from its Blueprint."
+        jcr:primaryType="cq:RolloutConfig"
+        jcr:title="Append Suffix Rollout Config">
+        <appendSuffix jcr:primaryType="cq:LiveSyncAction"/>
+    </append-suffix>
+</jcr:root>
