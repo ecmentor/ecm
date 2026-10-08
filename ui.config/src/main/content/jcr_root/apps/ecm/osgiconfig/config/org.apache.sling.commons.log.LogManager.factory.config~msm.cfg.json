@@ -1,0 +1,7 @@
+{
+  "org.apache.sling.commons.log.level": "INFO",
+  "org.apache.sling.commons.log.file": "logs/msm-custom-rollout.log",
+  "org.apache.sling.commons.log.names": [
+    "com.aem.ecm.core.msm.CustomTitleRolloutAction"
+  ]
+}

@@ -3,5 +3,6 @@
     <filter root="/apps/ecm/clientlibs"/>
     <filter root="/apps/ecm/components"/>
     <filter root="/apps/ecm/i18n"/>
+    <filter root="/apps/msm/english-blueprint"/>
     <filter root="/apps/msm/ecm"/>
 </workspaceFilter>
