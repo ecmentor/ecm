@@ -8,4 +8,11 @@
         jcr:title="Append Suffix Rollout Config">
         <appendSuffix jcr:primaryType="cq:LiveSyncAction"/>
     </append-suffix>
+    <custom-sku-title-rollout
+            cq:trigger="rollout"
+            jcr:description="Custom SKU title rollout for product pages"
+            jcr:primaryType="cq:RolloutConfig"
+            jcr:title="Custom sku title rollout for product pages">
+        <customskutitlerollout jcr:primaryType="cq:LiveSyncAction" action="custom-sku-title-rollout"/>
+    </custom-sku-title-rollout>
 </jcr:root>
