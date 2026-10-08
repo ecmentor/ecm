@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     jcr:primaryType="nt:unstructured">
-    <append-suffix
+    <custom-sku-title-rollout
         cq:trigger="rollout"
-        jcr:description="Appends &quot;(Synced)&quot; to the page title of a Live Copy whenever content is rolled out from its Blueprint."
+        jcr:description="custom SKU title rollout for product pages"
         jcr:primaryType="cq:RolloutConfig"
-        jcr:title="Append Suffix Rollout Config">
-        <appendSuffix jcr:primaryType="cq:LiveSyncAction"/>
-    </append-suffix>
+        jcr:title="custom sku title rollout for product pages">
+        <customskutitlerollout jcr:primaryType="cq:LiveSyncAction" action="custom-sku-title-rollout"/>
+    </custom-sku-title-rollout>
 </jcr:root>
