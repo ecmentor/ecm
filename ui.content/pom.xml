@@ -47,6 +47,7 @@
                 <groupId>org.apache.jackrabbit</groupId>
                 <artifactId>filevault-package-maven-plugin</artifactId>
                 <configuration>
+                    <allowIndexDefinitions>true</allowIndexDefinitions>
                     <properties>
                         <cloudManagerTarget>none</cloudManagerTarget>
                     </properties>
@@ -57,7 +58,7 @@
                     <validatorsSettings>
                         <jackrabbit-filter>
                             <options>
-                                <validRoots>/conf,/content,/content/experience-fragments,/content/dam</validRoots>
+                                <validRoots>/conf,/content,/content/experience-fragments,/content/dam,/oak:index</validRoots>
                             </options>
                         </jackrabbit-filter>
                     </validatorsSettings>
