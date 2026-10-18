@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:isDelivered="{Boolean}false"
         cq:lastModified="{Date}2026-09-25T20:56:58.108-07:00"
         cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2026-10-08T20:46:01.486-07:00"
+        cq:lastReplicated_publish="{Date}2026-10-08T20:46:01.486-07:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicatedBy_publish="admin"
+        cq:lastReplicationAction="Activate"
+        cq:lastReplicationAction_publish="Activate"
         cq:policy="ecm/components/page/policy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,cq:ReplicationStatus2,mix:versionable]"
         jcr:primaryType="nt:unstructured"
+        jcr:uuid="eb1a2f90-1a1a-449b-93c5-4ac8e4c04779"
         sling:resourceType="wcm/core/components/policies/mappings">
         <root
             cq:policy="ecm/components/container/policy_1574694950110"
