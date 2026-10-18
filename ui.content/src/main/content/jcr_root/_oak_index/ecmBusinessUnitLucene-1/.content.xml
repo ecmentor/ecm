@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="oak:QueryIndexDefinition"
+    compatVersion="{Long}2"
+    type="lucene"
+    async="async"
+    tags="[ecmBusinessUnit]"
+    includedPaths="[/content/ecm]">
+    <indexRules jcr:primaryType="nt:unstructured">
+        <cq:PageContent jcr:primaryType="nt:unstructured">
+            <properties jcr:primaryType="nt:unstructured">
+                <businessUnit
+                    jcr:primaryType="nt:unstructured"
+                    name="businessUnit"
+                    propertyIndex="{Boolean}true"
+                    notNullCheckEnabled="{Boolean}true"/>
+            </properties>
+        </cq:PageContent>
+    </indexRules>
+</jcr:root>
