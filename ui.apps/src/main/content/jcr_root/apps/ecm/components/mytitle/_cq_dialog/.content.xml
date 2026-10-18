@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
     jcr:primaryType="nt:unstructured">
     <content jcr:primaryType="nt:unstructured">
         <items jcr:primaryType="nt:unstructured">
@@ -17,12 +18,52 @@
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
-                            <titlePrefix
+                            <!--
+                                Client-side show/hide demo: AEM's built-in
+                                "cq-dialog-dropdown-showhide" behaviour (the
+                                same mechanism used by the Core Components
+                                List component's "Build List Using" dropdown).
+                                No custom JS - purely declarative Granite UI
+                                markup. Selecting "With Prefix" reveals the
+                                titlePrefix field below; "Standard" hides it.
+                            -->
+                            <titleDisplay
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Title Prefix"
-                                fieldDescription="Optional prefix prepended to the title, e.g. 'ECM - Investment Solutions'."
-                                name="./titlePrefix"/>
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Title Display"
+                                fieldDescription="Controls whether the Title Prefix field below is shown."
+                                name="./titleDisplay"
+                                granite:class="cq-dialog-dropdown-showhide">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    cq-dialog-dropdown-showhide-target=".ecm-titleprefix-showhide-target"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <standard
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Standard"
+                                        value="standard"/>
+                                    <prefixed
+                                        jcr:primaryType="nt:unstructured"
+                                        text="With Prefix"
+                                        value="prefixed"/>
+                                </items>
+                            </titleDisplay>
+                            <titlePrefixContainer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                granite:class="hide ecm-titleprefix-showhide-target">
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    showhidetargetvalue="prefixed"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <titlePrefix
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title Prefix"
+                                        fieldDescription="Optional prefix prepended to the title, e.g. 'ECM - Investment Solutions'."
+                                        name="./titlePrefix"/>
+                                </items>
+                            </titlePrefixContainer>
                         </items>
                     </ecmTitleOptions>
                 </items>
