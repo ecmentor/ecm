@@ -1,0 +1,16 @@
+ <sly data-sly-use.model="com.aem.ecm.core.models.QuickLinksModel">
+     <div class="quick-links">
+     <h2 class="quick-links__title">${model.heading}</h2>
+
+            <ul class="quick-links__list" data-sly-test="${model.hasLinks}">
+                <li class="quick-links__item" data-sly-list.link="${model.links}">
+                    <a class="quick-links__link"
+                       href="${link.url}"
+                       target="${link.target}"
+                       rel="${link.external ? 'noopener noreferrer' : ''}">
+                        ${link.label}
+                    </a>
+                </li>
+            </ul>
+     </div>
+    </sly>
