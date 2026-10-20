@@ -1,0 +1,7 @@
+{
+  "channelName": "SMS",
+  "channelCode": "SMS",
+  "sender": "ECM Alerts",
+  "enabled": true,
+  "priority": 2
+}
