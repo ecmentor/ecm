@@ -11,6 +11,7 @@
     <filter root="/oak:index/ecmPageCategoryLucene-1" mode="merge"/>
     <filter root="/oak:index/ecmBusinessUnitLucene-1" mode="merge"/>
     <filter root="/conf/global/settings/workflow/models"/>
+    <filter root="/var/workflow/models/ecm-content-audit-workflow"/>
     <filter root="/var/workflow/models/ecm-workflow-fundamentals"/>
     <filter root="/var/workflow/models/ecm-workflow-process-step"/>
     <filter root="/var/workflow/models/ecm-workflow-dialog-participant"/>
