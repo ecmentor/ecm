@@ -1,0 +1,17 @@
+<sly class="article" data-sly-use.model="com.aem.ecm.core.models.ArticleModel" />
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+
+<h2>Understanding AEM Dispatcher</h2>
+
+<h1 data-sly-test="${model.title}">${model.title}</h1>
+
+<div class="article__text">${model.text}</div>
+
+<p class="article__reading-time" data-sly-test="${model.estimatedReadingTime > 0}">
+    ${model.readingTimeLabel}:
+    ${model.estimatedReadingTime}
+    ${model.estimatedReadingTime == 1 ? 'minute' : 'minutes'}
+</p>
+
+<!-- Edit mode placeholder: Visible only in Author Edit mode when empty -->
+<sly data-sly-call="${templates.placeholder @isEmpty=!model.title}" />
