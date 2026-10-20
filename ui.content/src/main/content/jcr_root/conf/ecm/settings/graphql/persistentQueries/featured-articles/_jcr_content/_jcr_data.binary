@@ -1,0 +1,27 @@
+query {
+  ecmArticleModelList(
+    filter: {
+      featured: {
+        _expressions: [
+          {
+            value: true
+          }
+        ]
+      }
+    }
+  )
+  {
+    items {
+      articleId
+      summary {plaintext}
+      publishDate
+      featured
+      author {
+        fullName
+        email
+        jobTitle
+        biography{plaintext}
+      }
+    }
+  }
+}
