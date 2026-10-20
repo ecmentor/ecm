@@ -1,0 +1,7 @@
+{
+  "org.apache.sling.commons.log.names": [
+    "com.aem.ecm.core.models.ECMMyTeaserImpl"
+  ],
+  "org.apache.sling.commons.log.level": "INFO",
+  "org.apache.sling.commons.log.file": "logs/myteaser.log"
+}
