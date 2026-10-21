@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="oak:QueryIndexDefinition"
+    async="async"
+    compatVersion="{Long}2"
+    includedPaths="[/content/ecm]"
+    tags="[ecmContentCategory]"
+    type="lucene">
+    <indexRules jcr:primaryType="nt:unstructured">
+        <cq:PageContent jcr:primaryType="nt:unstructured">
+            <properties jcr:primaryType="nt:unstructured">
+                <contentCategory
+                    jcr:primaryType="nt:unstructured"
+                    name="contentCategory"
+                    notNullCheckEnabled="{Boolean}true"
+                    propertyIndex="{Boolean}true"/>
+            </properties>
+        </cq:PageContent>
+    </indexRules>
+</jcr:root>
